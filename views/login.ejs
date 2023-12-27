@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Авторизоваться</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="icon" href="https://index-eosin.vercel.app/Imarat%20Group.svg" type="image/icon type" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://index-eosin.vercel.app/Imarat%20Group.svg" class="img-fluid" alt="Phone image" />
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <% if (typeof alert !=='undefined' && alert.trim() !=='' ) { %>
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                Swal.fire({
+                  icon: "error",
+                  title: "Error",
+                  text: "<%= alert %>",
+                });
+              });
+            </script>
+            <% } %>
+              <form action="/login" method="post">
+                <label for="username" class="form-label" style="font-weight: bold">Имя пользователя:</label>
+                <div class="form-outline mb-4">
+                  <input type="text" class="form-control form-control-lg" id="username" name="username" required placeholder="Имя пользователя"/>
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="password" style="font-weight: bold">Пароль:</label>
+                  <input type="password" class="form-control form-control-lg" id="password" name="password" required placeholder="Пароль"/>
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg btn-block" style="font-weight: bold">
+                  Авторизоваться
+                </button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
