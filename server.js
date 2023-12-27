@@ -56,7 +56,7 @@ app.post("/login", async (req, res) => {
       req.session.user = user;
       return res.redirect(`/account/${user._id}`);
     } else {
-      return res.render("login", { alert: "User not found" });
+      return res.render("login", { alert: "Пользователь не найден" });
     }
   } catch (error) {
     console.error("Error fetching data:", error.message);
