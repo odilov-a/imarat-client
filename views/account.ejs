@@ -45,44 +45,50 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Камера №:"2"</h5>
-                <p class="card-text">
-                  <video width="100%" height="100%" controls disablePictureInPicture controlslist="nodownload noplaybackrate">
-                    <source src="<%= user.cameraTwo %>" type="video/mp4">
-                    <source src="<%= user.cameraTwo %>" type="video/ogg">
-                  </video>
-                </p>
+            <% if (user.cameraTwo) { %>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Камера №:"2"</h5>
+                  <p class="card-text">
+                    <video width="100%" height="100%" controls disablePictureInPicture controlslist="nodownload noplaybackrate">
+                      <source src="<%= user.cameraTwo %>" type="video/mp4">
+                      <source src="<%= user.cameraTwo %>" type="video/ogg">
+                    </video>
+                  </p>
+                </div>
               </div>
-            </div>
-            <br>
+              <br>
+            <% } %>
+          </div>          
+          <div class="col-sm-6">
+            <% if (user.cameraThree) { %>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Камера №:"3"</h5>
+                  <p class="card-text">
+                    <video width="100%" height="100%" controls disablePictureInPicture controlslist="nodownload noplaybackrate">
+                      <source src="<%= user.cameraThree %>" type="video/mp4">
+                      <source src="<%= user.cameraThree %>" type="video/ogg">
+                    </video>
+                  </p>
+                </div>
+              </div>
+            <% } %>
           </div>
           <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Камера №:"3"</h5>
-                <p class="card-text">
-                  <video width="100%" height="100%" controls disablePictureInPicture controlslist="nodownload noplaybackrate">
-                    <source src="<%= user.cameraThree %>" type="video/mp4">
-                    <source src="<%= user.cameraThree %>" type="video/ogg">
-                  </video>
-                </p>
+            <% if (user.cameraFour) { %>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Камера №:"4"</h5>
+                  <p class="card-text">
+                    <video width="100%" height="100%" controls disablePictureInPicture controlslist="nodownload noplaybackrate">
+                      <source src="<%= user.cameraFour %>" type="video/mp4">
+                      <source src="<%= user.cameraFour %>" type="video/ogg">
+                    </video>
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Камера №:"4"</h5>
-                <p class="card-text">
-                  <video width="100%" height="100%" controls disablePictureInPicture controlslist="nodownload noplaybackrate">
-                    <source src="<%= user.cameraFour %>" type="video/mp4">
-                    <source src="<%= user.cameraFour %>" type="video/ogg">
-                  </video>
-                </p>
-              </div>
-            </div>
+            <% } %>
             <br>
           </div>
         </div>
